@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Полина Ионова](https://up.htmlacademy.ru/htmlcss/27/user/1336237).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Лесухин](https://htmlacademy.ru/profile/caneklis).
 
 ---
 
