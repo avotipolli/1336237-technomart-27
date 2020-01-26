@@ -2,11 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Техномарт</title>
+    <title>HTML Academy:Техномарт</title>
   </head>
   <body>
     <header>
-      <h1>Перфораторы</h1>
       <a href="index.html">
         <img src="img/logo.svg" width="220" height="47" alt="Логотип магазина инструментов «Техномарт»">
       </a>
@@ -14,8 +13,8 @@
         <input type="search" name="search" placeholder="Поиск">
         <input type="submit" value="">
       </form>
-      <a href="#"><span>Закладки</span></a>
-      <a href="#"><span>Корзина</span></a>
+      <a href="#">Закладки</a>
+      <a href="#">Корзина</a>
       <a href="#">Оформить заказ</a>
       <p>
         Интернет-магазин<br>
@@ -23,13 +22,12 @@
         и инструментов для ремонта
       </p>
       <div>
-        <a href="tel:+78125550555"><span>+7(812) 555-05-55</span></a>
+        <a href="tel:+78125550555">+7(812) 555-05-55</a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
       <div>
-        <input type="image" name="user-icon" src="user-icon.png" alt="Иконка пользователя">
-        <input type="text" name="username" value="Равшан Джамшутович" disabled>
-        <input type="image" name="exit-button" src="exit.png" alt="Выйти">
+        <a href="#">Равшан Джамшутович</a>
+        <a href="#" title="Выйти">Выйти</a>
         <a href="#">Мои заказы</a>
         <a href="#">Личный кабинет</a>
       </div>
@@ -56,22 +54,28 @@
       </ul>
       <h1>Перфораторы</h1>
       <form action="https://echo.htmlacademy.ru/courses" method="post">
-        <select name="vendor" multiple>
-          <optgroup label="Производители">
-            <option value="Bosch">Bosch</option>
-            <option value="Интерскол">Интерскол</option>
-            <option value="Makita">Makita</option>
-            <option value="Dewalt">Dewalt</option>
-            <option value="Hitachi">Hitachi</option>
-          </optgroup>
+        <section name="vendor">
+          <h2>Производители</h2>
+            <label for="filter-bosch">Bosch</label>
+            <input type="checkbox" id="filter-bosch" name="Bosch" checked>
+            <label for="filter-interscol">Интерскол</label>
+            <input type="checkbox" id="filter-interscol" name="Интерскол">
+            <label for="filter-makita">Makita</label>
+            <input type="checkbox" id="filter-makita" name="Makita" checked>
+            <label for="filter-dewalt">Dewalt</label>
+            <input type="checkbox" id="filter-dewalt" name="Dewalt">
+            <label for="filter-hitachi">Hitachi</label>
+            <input type="checkbox" id="filter-hitachi" name="Hitachi">
+          </section>
+        <section name="energy-type">
+          <h2>Питание</h2>
+            <label for="radiobutton1>Аккумуляторные</label>
+            <input type="radio" id="radiobutton1" name="energy-type-button" value="Аккумуляторные" selected>
+            <label for="radiobutton2>Сетевые</label>
+            <input type="radio" id="radiobutton2" name="energy-type-button" value="Сетевые">
+          </section>
         </select>
-        <select name="energy-type">
-          <optgroup label="Питание">
-            <option value="Аккумуляторные" selected>Аккумуляторные</option>
-            <option value="Сетевые">Сетевые</option>
-          </optgroup>
-        </select>
-        <input type="button" name="filtr-button" value="Показать">
+        <input type="submit" name="filtr-button" value="Показать">
       </form>
       <div>
         <h2>Список товаров</h2>
@@ -86,6 +90,10 @@
             </h3>
             <span class="oldprice">22500 р.</span>
             <span class="price">15500 р.</span>
+            <div class="blok">
+              <a href="#">В закладки</a>
+              <a href="#">Купить</a>
+            </div>
           </li>
           <li>
             <img class="offerimage" src="offer2.png" width="218" height="170" alt="Изображение Bosch BFG 6000">
@@ -97,9 +105,13 @@
             </h3>
             <span class="oldprice">30500 р.</span>
             <span class="price">25500 р.</span>
+            <div class="blok">
+              <a href="#">В закладки</a>
+              <a href="#">Купить</a>
+            </div>
           </li>
-          <li>
-            <img class="offerimage new" src="offer3.png" width="218" height="170" alt="Изображение Bosch BFG 2000">
+          <li class="new">
+            <img class="offerimage" src="offer3.png" width="218" height="170" alt="Изображение Bosch BFG 2000">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -108,6 +120,10 @@
             </h3>
             <span class="oldprice"></span>
             <span class="price">12500 р.</span>
+            <div class="blok">
+              <a href="#">В закладки</a>
+              <a href="#">Купить</a>
+            </div>
           </li>
           <li>
             <img class="offerimage" src="offer4.png" width="218" height="170" alt="Изображение Bosch BFG 3000">
@@ -119,9 +135,13 @@
             </h3>
             <span class="oldprice">22500 р.</span>
             <span class="price">15500 р.</span>
+            <div class="blok">
+              <a href="#">В закладки</a>
+              <a href="#">Купить</a>
+            </div>
           </li>
-          <li>
-            <img class="offerimage new" src="offer5.png" width="218" height="170" alt="Изображение Bosch BFG 6000">
+          <li class="new">
+            <img class="offerimage" src="offer5.png" width="218" height="170" alt="Изображение Bosch BFG 6000">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -130,6 +150,10 @@
             </h3>
             <span class="oldprice">22500 р.</span>
             <span class="price">15500 р.</span>
+            <div class="blok">
+              <a href="#">В закладки</a>
+              <a href="#">Купить</a>
+            </div>
           </li>
           <li>
             <img class="offerimage" src="offer6.png" width="218" height="170" alt="Изображение Bosch BFG 2000">
@@ -141,9 +165,13 @@
             </h3>
             <span class="oldprice"></span>
             <span class="price">15500 р.</span>
+            <div class="blok">
+              <a href="#">В закладки</a>
+              <a href="#">Купить</a>
+            </div>
           </li>
-          <li>
-            <img class="offerimage new" src="offer7.png" width="218" height="170" alt="Изображение Bosch BFG 3000">
+          <li class="new">
+            <img class="offerimage" src="offer7.png" width="218" height="170" alt="Изображение Bosch BFG 3000">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -152,6 +180,10 @@
             </h3>
             <span class="oldprice">22500 р.</span>
             <span class="price">15500 р.</span>
+            <div class="blok">
+              <a href="#">В закладки</a>
+              <a href="#">Купить</a>
+            </div>
           </li>
           <li>
             <img class="offerimage" src="offer8.png" width="218" height="170" alt="Изображение Bosch BFG 6000">
@@ -163,6 +195,10 @@
             </h3>
             <span class="oldprice">22500 р.</span>
             <span class="price">15500 р.</span>
+            <div class="blok">
+              <a href="#">В закладки</a>
+              <a href="#">Купить</a>
+            </div>
           </li>
           <li>
             <img class="offerimage" src="offer9.png" width="218" height="170" alt="Изображение Bosch BFG 2000">
@@ -174,6 +210,10 @@
             </h3>
             <span class="oldprice"></span>
             <span class="price">15500 р.</span>
+            <div class="blok">
+              <a href="#">В закладки</a>
+              <a href="#">Купить</a>
+            </div>
           </li>
         </ul>
       </div>
