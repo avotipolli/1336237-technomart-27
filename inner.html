@@ -55,6 +55,22 @@
       <h1>Перфораторы</h1>
       <form action="https://echo.htmlacademy.ru/courses" method="post">
         <section>
+          <p>Фильтр:</p>
+          <h2>Цена:</h2>
+          <div class="filter-price">
+            <input type="range" min="0" step="1" max="30000" value="0">
+            <span>0</span> - <span>30000</span>
+          </div>
+        </section>
+        <section>
+          <h3>Сортировка:</h3>
+          <a href="#">По цене</a>
+          <a href="#">По типу</a>
+          <a href="#">По функционалу</a>
+          <a href="#">По возрастанию</a>
+          <a href="#">По убыванию</a>
+        </section>
+        <section>
           <h2>Производители</h2>
             <label for="filter-bosch">Bosch</label>
             <input type="checkbox" id="filter-bosch" name="Bosch" checked>
@@ -216,6 +232,20 @@
           </li>
         </ul>
       </div>
+      <ul>
+        <li><a>1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">Следующая</a></li>
+      </ul>
+      <section>
+        <h2>Пара слов о перфораторах</h2>
+        <p>
+          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
+          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
+      </section>
     </main>
     <footer>
       <div>
@@ -258,5 +288,10 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
       </p>
     </footer>
+    <section>
+      <h2>Товар добавлен в корзину!</h2>
+      <a href="#">Оформить заказ</a>
+      <a href="#">Продолжить покупки</a>
+    </section>
   </body>
 </html>
