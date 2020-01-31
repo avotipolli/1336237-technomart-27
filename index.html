@@ -6,7 +6,7 @@
   </head>
   <body>
     <header>
-      <h1 hidden>Компания «Техномарт»</h1>
+      <h1 class="visually-hidden">Компания «Техномарт»</h1>
       <a href="index.html">
         <img src="img/logo-technomart.svg" width="220" height="47" alt="Логотип магазина инструментов «Техномарт»">
       </a>
@@ -27,7 +27,10 @@
         <a href="tel:+78125550555">+7(812) 555-05-55</a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
-      <a href="#">Войти</a>
+      <a href="login-page.html">
+        <img src="img/icon-login.svg" alt="">
+        Войти
+      </a>
       <a href="#">Регистрация</a>
       <nav>
         <ul>
@@ -55,10 +58,23 @@
           <h3>Техника</h3>
           <a href="#">Для стройки</a>
         </div>
-        <div>
-          <h3>Дрели</h3>
-          <p>Соседям на радость!</p>
-          <a href="inner.html">Открыть каталог</a>
+        <div class="slider">
+          <ul>
+            <li>
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+              <img src="img/slider-image1.jpg" width="620" height="266" alt="">
+              <a href="inner.html">Открыть каталог</a>
+            </li>
+            <li>
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+              <img src="img/slider-image2.jpg" width="620" height="266" alt="">
+              <a href="inner.html">Открыть каталог</a>
+            </li>
+          </ul>
+          <button type="button"><img src="img/icon-left.svg" alt="Назад"></button>
+          <button type="button"><img src="img/icon-right.svg" alt="Вперед"></button>
         </div>
         <div>
           <h3>Скидки 50%</h3>
@@ -74,7 +90,7 @@
         <a href="#">Все популярные товары</a>
         <ul>
           <li>
-            <img class="offerimage" src="img/items/item-bosch-bfg9000.jpg" width="218" height="170" alt="Изображение Bosch BFG 9000">
+            <img class="offerimage" src="img/items/item-bosch-bfg9000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 9000 со скидкой за 25500 рублей">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -89,7 +105,7 @@
             </div>
           </li>
           <li>
-            <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Изображение Bosch BFG 3000">
+            <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000 со скидкой за 15500 рублей">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -104,7 +120,7 @@
             </div>
           </li>
           <li>
-            <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Изображение Bosch BFG 6000">
+            <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000 со скидкой за 25500 рублей">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -119,7 +135,7 @@
             </div>
           </li>
           <li class="new">
-            <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Изображение Bosch BFG 2000">
+            <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000. Новинка">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -256,9 +272,20 @@
 
         <div>
         <a href="#"></a>
-          <img src="img/map-small.png" width="300" height="158" alt="Местоположение на карте">
+          <img src="img/map-small.png" width="300" height="158" alt="Адрес офиса: Большая конюшенная д.19">
         </div>
         <a href="#">Заблудились? Напишите нам!</a>
+        <div class="visually-hidden">
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <label for="user-name">Ваше имя:</label>
+            <input id="user-name" type="text" placeholder="Имя Фамилия">
+            <label for="user-email">Ваш e-mail:</label>
+            <input id="user-email" type="email" placeholder="email@example.com">
+            <label for="comment-field">Текст письма:</label>
+            <textarea id="comment-field" placeholder="В свободной форме"></textarea>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer>
