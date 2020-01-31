@@ -27,7 +27,7 @@
       </div>
       <div>
         <a href="#">Равшан Джамшутович</a>
-        <a href="#" title="Выйти">Выйти</a>
+        <button type="reset"><img src="img/icon-logout.svg" alt="Выйти из личного кабинета"></button>
         <a href="#">Мои заказы</a>
         <a href="#">Личный кабинет</a>
       </div>
@@ -46,7 +46,7 @@
     <main>
       <ul>
         <li>
-          <input type="image" name="home-button" src="home.png" alt="Главная">
+          <input type="image" name="home-button" src="img/icon-home.svg" alt="Вернуться на Главную">
         </li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
@@ -54,24 +54,24 @@
       </ul>
       <h1>Перфораторы</h1>
       <form action="https://echo.htmlacademy.ru/courses" method="post">
-        <section>
-          <p>Фильтр:</p>
-          <h2>Цена:</h2>
+        <p>Фильтр:</p>
+        <fieldset>
+          <legend>Цена:</legend>
           <div class="filter-price">
             <input type="range" min="0" step="1" max="30000" value="0">
             <span>0</span> - <span>30000</span>
           </div>
-        </section>
-        <section>
-          <h3>Сортировка:</h3>
+        </fieldset>
+        <fieldset>
+          <legend>Сортировка:</legend>
           <a href="#">По цене</a>
           <a href="#">По типу</a>
           <a href="#">По функционалу</a>
           <a href="#">По возрастанию</a>
           <a href="#">По убыванию</a>
-        </section>
-        <section>
-          <h2>Производители</h2>
+        </fieldset>
+        <fieldset>
+          <legend>Производители</legend>
             <label for="filter-bosch">Bosch</label>
             <input type="checkbox" id="filter-bosch" name="Bosch" checked>
             <label for="filter-interscol">Интерскол</label>
@@ -82,21 +82,21 @@
             <input type="checkbox" id="filter-dewalt" name="Dewalt">
             <label for="filter-hitachi">Hitachi</label>
             <input type="checkbox" id="filter-hitachi" name="Hitachi">
-          </section>
-        <section>
-          <h2>Питание</h2>
+          </fieldset>
+        <fieldset>
+          <legend>Питание</legend>
             <label for="radiobutton1">Аккумуляторные</label>
             <input type="radio" id="radiobutton1" name="energy-type-button" value="Аккумуляторные" checked>
             <label for="radiobutton2">Сетевые</label>
             <input type="radio" id="radiobutton2" name="energy-type-button" value="Сетевые">
-          </section>
+          </fieldset>
         <input type="submit" name="filtr-button" value="Показать">
       </form>
       <div>
         <h2>Список товаров</h2>
         <ul>
           <li>
-            <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Изображение Bosch BFG 3000">
+            <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000 со скидкой за 15500 рублей">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -111,7 +111,7 @@
             </div>
           </li>
           <li>
-            <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Изображение Bosch BFG 6000">
+            <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000 со скидкой за 15500 рублей">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -126,7 +126,7 @@
             </div>
           </li>
           <li class="new">
-            <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Изображение Bosch BFG 2000">
+            <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000. Новинка">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -141,7 +141,7 @@
             </div>
           </li>
           <li>
-            <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Изображение Bosch BFG 3000">
+            <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000 со скидкой за 15500 рублей">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -156,7 +156,7 @@
             </div>
           </li>
           <li class="new">
-            <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Изображение Bosch BFG 6000">
+            <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000. Новинка">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -171,7 +171,7 @@
             </div>
           </li>
           <li>
-            <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Изображение Bosch BFG 2000">
+            <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000 со скидкой за 15500 рублей">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -186,7 +186,7 @@
             </div>
           </li>
           <li class="new">
-            <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Изображение Bosch BFG 3000">
+            <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000. Новинка">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -201,7 +201,7 @@
             </div>
           </li>
           <li>
-            <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Изображение Bosch BFG 6000">
+            <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000 со скидкой за 15500 рублей">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -216,7 +216,7 @@
             </div>
           </li>
           <li>
-            <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Изображение Bosch BFG 2000">
+            <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000 со скидкой за 15500 рублей">
             <h3>
               <a href="#">
                 <span>Перфоратор</span>
@@ -288,10 +288,10 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
       </p>
     </footer>
-    <section>
+    <section class="visually-hidden">
       <h2>Товар добавлен в корзину!</h2>
       <a href="#">Оформить заказ</a>
-      <a href="#">Продолжить покупки</a>
+      <button type="button">Продолжить покупки</button>
     </section>
   </body>
 </html>
