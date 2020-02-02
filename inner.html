@@ -59,24 +59,16 @@
         <li>Перфораторы</li>
       </ul>
       <h1>Перфораторы</h1>
+      <form action="https://echo.htmlacademy.ru/courses" method="post">
         <p>Фильтр:</p>
-        <section>
-          <h2>Цена:</h2>
-          <div class="filter-price">
-            <input type="range" min="0" step="1" max="30000" value="0">
-            <span>0</span> - <span>30000</span>
-          </div>
-        </section>
-        <section>
-          <h2>Сортировка:</h2>
-          <a href="#">По цене</a>
-          <a href="#">По типу</a>
-          <a href="#">По функционалу</a>
-          <a href="#">По возрастанию</a>
-          <a href="#">По убыванию</a>
-        </section>
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
         <fieldset>
+            <legend>Цена:</legend>
+            <div class="filter-price">
+              <input type="range" min="0" step="1" max="30000" value="0">
+              <span>0</span> - <span>30000</span>
+            </div>
+        </fieldset>
+         <fieldset>
           <legend>Производители</legend>
             <label for="filter-bosch">Bosch</label>
             <input type="checkbox" id="filter-bosch" name="Bosch" checked>
@@ -98,6 +90,14 @@
           </fieldset>
         <input type="submit" name="filtr-button" value="Показать">
       </form>
+      <section>
+        <h2>Сортировка:</h2>
+        <a href="#">По цене</a>
+        <a href="#">По типу</a>
+        <a href="#">По функционалу</a>
+        <a href="#">По возрастанию</a>
+        <a href="#">По убыванию</a>
+      </section>
       <div>
         <h2>Список товаров</h2>
         <ul>
@@ -109,8 +109,8 @@
                 <span>Bosch BFG 3000</span>
               </a>
             </h3>
-            <span class="oldprice" title="Старая цена">22500 р.</span>
-            <span class="price" title="Новая цена">15500 р.</span>
+            <span class="visually-hidden">Старая цена</span><span>22500 р.</span>
+            <span class="visually-hidden">Новая цена</span><span>15500 р.</span>
             <div class="blok">
               <a href="#">В закладки</a>
               <a href="#">Купить</a>
@@ -124,8 +124,8 @@
                 <span>Bosch BFG 6000</span>
               </a>
             </h3>
-            <span class="oldprice" title="Старая цена">30500 р.</span>
-            <span class="price" title="Новая цена">25500 р.</span>
+            <span class="visually-hidden">Старая цена</span><span>30500 р.</span>
+            <span class="visually-hidden">Новая цена</span><span>25500 р.</span>
             <div class="blok">
               <a href="#">В закладки</a>
               <a href="#">Купить</a>
@@ -140,7 +140,7 @@
               </a>
             </h3>
             <span class="oldprice"></span>
-            <span title="Цена" class="price">12500 р.</span>
+            <span class="visually-hidden">Цена</span><span>12500 р.</span>
             <div class="blok">
               <a href="#">В закладки</a>
               <a href="#">Купить</a>
@@ -154,8 +154,8 @@
                 <span>Bosch BFG 3000</span>
               </a>
             </h3>
-            <span class="oldprice" title="Старая цена">22500 р.</span>
-            <span class="price" title="Новая цена">15500 р.</span>
+            <span class="visually-hidden">Старая цена</span><span>22500 р.</span>
+            <span class="visually-hidden">Новая цена</span><span>15500 р.</span>
             <div class="blok">
               <a href="#">В закладки</a>
               <a href="#">Купить</a>
@@ -169,8 +169,8 @@
                 <span>Bosch BFG 6000</span>
               </a>
             </h3>
-            <span class="oldprice" title="Старая цена">22500 р.</span>
-            <span class="price" title="Новая цена">15500 р.</span>
+            <span class="visually-hidden">Старая цена</span><span>22500 р.</span>
+            <span class="visually-hidden">Новая цена</span><span>15500 р.</span>
             <div class="blok">
               <a href="#">В закладки</a>
               <a href="#">Купить</a>
@@ -185,7 +185,7 @@
               </a>
             </h3>
             <span class="oldprice"></span>
-            <span class="price" title="Цена">15500 р.</span>
+            <span class="visually-hidden">Цена</span><span>15500 р.</span>
             <div class="blok">
               <a href="#">В закладки</a>
               <a href="#">Купить</a>
@@ -199,8 +199,8 @@
                 <span>Bosch BFG 3000</span>
               </a>
             </h3>
-            <span class="oldprice" title="Старая цена">22500 р.</span>
-            <span class="price" title="Новая цена">15500 р.</span>
+            <span class="visually-hidden">Старая цена</span><span>22500 р.</span>
+            <span class="visually-hidden">Новая цена</span><span>15500 р.</span>
             <div class="blok">
               <a href="#">В закладки</a>
               <a href="#">Купить</a>
@@ -214,8 +214,8 @@
                 <span>Bosch BFG 6000</span>
               </a>
             </h3>
-            <span class="oldprice" title="Старая цена">22500 р.</span>
-            <span class="price" title="Новая цена">15500 р.</span>
+            <span class="visually-hidden">Старая цена</span><span>22500 р.</span>
+            <span class="visually-hidden">Новая цена</span><span>15500 р.</span>
             <div class="blok">
               <a href="#">В закладки</a>
               <a href="#">Купить</a>
@@ -230,7 +230,7 @@
               </a>
             </h3>
             <span class="oldprice"></span>
-            <span class="price" title="Цена">15500 р.</span>
+            <span class="visually-hidden">Цена</span><span>15500 р.</span>
             <div class="blok">
               <a href="#">В закладки</a>
               <a href="#">Купить</a>
@@ -298,7 +298,7 @@
       <h2>Товар добавлен в корзину!</h2>
       <a href="#">Оформить заказ</a>
       <a href="#">Продолжить покупки</a>
-      <button type="reset" title="Закрыть"></button>
+      <button type="button" title="Закрыть"></button>
     </section>
   </body>
 </html>
