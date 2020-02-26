@@ -3,17 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy:Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-login.css" rel="stylesheet">
   </head>
   <body>
-    <form action="https://echo.htmlacademy.ru/courses" method="post">
-      <label for="user-login">Ваше имя:</label>
-      <input type="text" id="user-login" name="login" placeholder="Имя Фамилия">
-      <label for="password">Ваш пароль:</label>
-      <input type="password" id="password" name="password" placeholder="********">
-      <button type="submit"><img src="img/icon-login.svg" alt="">Войти</button>
-    </form>
+    <main>
+      <h1 class="visually-hidden">Вход в личный кабинет</h1>
+        <form action="https://echo.htmlacademy.ru/courses" class="login-form" method="get">
+        <ul class="login-wrapper">
+          <li class="form-item">
+            <label for="user-login">Ваше имя:</label>
+            <input type="text" name="login" id="user-login" placeholder="Имя Фамилия">
+          </li>
+          <li class="form-item">
+            <label for="password">Ваш пароль:</label>
+            <input type="password" name="password" id="password" placeholder="*********">
+          </li>
+        </ul>
+        <div class="form-bottom">
+        <button class="button login-button" type="submit">Отправить</button>
+        </div>
+        </form>
+      </main>
+    <script src="js/login-page.js"></script>
   </body>
 </html>
