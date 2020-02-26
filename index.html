@@ -15,15 +15,15 @@
           <a class="logo header-top-logo" href="index.html">
             <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип магазина инструментов «Техномарт»">
           </a>
-          <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="get">
+          <form class="search-form" method="get">
             <input class="search" type="search" name="search" id="search" placeholder="Поиск:">
             <button class="search-button" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
               <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
             </svg></button>
           </form>
           <ul class="order-menu">
-            <li class="order-menu-item bookmark"><a href="#">Закладки:</a></li>
-            <li class="order-menu-item cart"><a href="#">Корзина:</a></li>
+            <li class="order-menu-item bookmark"><a href="#">Закладки:<span>0</span></a></li>
+            <li class="order-menu-item cart"><a href="#">Корзина:<span>0</span></a></li>
             <li class="order-menu-item order-button"><a href="#">Оформить заказ</a></li>
           </ul>
         </div>
@@ -37,7 +37,7 @@
           и инструментов для ремонта
         </h1>
         <div class="contact">
-          <a class="phone-button" href="tel:+78125550555">+7(812) 555-05-55</a>
+          <a class="phone-button" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <ul class="user-menu">
@@ -60,45 +60,54 @@
       </header>
     <main>
       <div class="main container">
-      <section class="catalog">
+      <section class="catalog-menu">
         <div class="catalog-wrapper-1">
-          <div class="new catalog-item item1">
+          <div class="catalog-menu-item item1">
+            <div class="flag flag-new"><span class="visually-hidden">Новинка</span></div>
             <h3>Материалы</h3>
             <a class="button catalog-button catalog-button-item1" href="#">На любой вкус</a>
           </div>
-          <div class="catalog-item item2">
+          <div class="catalog-menu-item item2">
             <h3>Инструмент</h3>
             <a class="button catalog-button catalog-button-item2" href="#">На все случаи</a>
           </div>
         <div class="slider-wrapper">
-        <div class="slider catalog-item">
-          <ul>
-            <li class="slide first-slide">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <a class="button open-catalog-button" href="inner.html">Открыть каталог</a>
-            </li>
-            <li class="display-none slide second-slide ">
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-              <a class="button open-catalog-button" href="inner.html">Открыть каталог</a>
-            </li>
-          </ul>
-        </div>
-          <button class="turn-left-button" type="button"><span class="visually-hidden">Назад</span></button>
-          <button class="turn-right-button" type="button"><span class="visually-hidden">Вперед</span></button>
+          <div class="blog-slider__container">
+            <div class="blogSlides fade">
+              <div class="blog-slider__numbertext">
+                <h3>Дрели</h3>
+                <p>Соседям на радость!</p>
+                <a class="button open-catalog-button" href="inner.html">Открыть каталог</a>
+              </div>
+              <img src="img/slider-image1.jpg" width="620" height="266" alt="">
+                </div>
+            <div class="blogSlides fade">
+              <div class="blog-slider__numbertext">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+                <a class="button open-catalog-button" href="inner.html">Открыть каталог</a>
+              </div>
+              <img src="img/slider-image2.jpg" width="620" height="266" alt="">
+              </div>
+            <a class="turn-left-button" onclick="plusSlides(-1)"><span class="visually-hidden">Назад</span></a>
+            <a class="turn-right-button" onclick="plusSlides(1)"><span class="visually-hidden">Вперед</span></a>
+          <div class="blogSlider__dots" style="text-align:center">
+            <span class="blogSlider__dots--dot" onclick="currentSlide(1)"></span>
+            <span class="blogSlider__dots--dot" onclick="currentSlide(2)"></span>
+            </div>
         </div>
       </div>
+    </div>
       <div class="catalog-wrapper-2">
-        <div class="catalog-item item3">
+        <div class="catalog-menu-item item3">
           <h3>Техника</h3>
           <a class="button catalog-button catalog-button-item3" href="#">Для стройки</a>
         </div>
-        <div class="catalog-item item4">
+        <div class="catalog-menu-item item4">
           <h3>Скидки 50%</h3>
           <a class="button catalog-button catalog-button-item4" href="#">На 350 товаров</a>
         </div>
-        <div class="catalog-item item5">
+        <div class="catalog-menu-item item5">
           <h3>Доставка</h3>
           <a class="button catalog-button catalog-button-item5" href="#">Бесплатно</a>
         </div>
@@ -109,8 +118,8 @@
           <h2>Популярные товары:</h2>
           <a class="button popular-items-button" href="#">Все популярные товары</a>
         </div>
-        <ul class="popular-items">
-          <li class="popular-item">
+        <ul class="popular-items catalog-items">
+          <li class="popular-item catalog-item">
             <img class="offerimage" src="img/items/item-bosch-bfg9000.jpg" width="218" height="170" alt="Изображение Bosch BFG 9000">
             <div class="order-modal">
               <a class="order-modal-button cart-modal-button" href="#">Купить</a>
@@ -118,16 +127,16 @@
             </div>
             <h3>
               <a href="#">
-                <span>Перфоратор</span>
-                <span class="uppercase">Bosch<br> BFG 9000</span>
+                <span>Перфоратор BOSCH</span><br>
+                <span>BFG 9000</span>
               </a>
             </h3>
             <div class="price">
-              <span class="visually-hidden">Старая цена</span><span class="old-price">32500 р.</span>
-              <span class="visually-hidden">Новая цена</span><span class="button price price-button">25500 р.</span>
+              <span class="visually-hidden">Старая цена</span><span class="old-price">32500 Р.</span>
+              <span class="visually-hidden">Новая цена</span><span class="price price-button">25500 Р.</span>
             </div>
             </li>
-          <li class="popular-item">
+          <li class="popular-item catalog-item">
             <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Изображения Bosch BFG 3000">
             <div class="order-modal">
               <a class="order-modal-button cart-modal-button" href="#">Купить</a>
@@ -140,11 +149,11 @@
               </a>
             </h3>
             <div class="price">
-            <span class="visually-hidden">Старая цена</span><span class="price old-price">22500 р.</span>
-            <span class="visually-hidden">Новая цена</span><span class="button price price-button">15500 р.</span>
+            <span class="visually-hidden">Старая цена</span><span class="price old-price">22500 Р.</span>
+            <span class="visually-hidden">Новая цена</span><span class="price price-button">15500 Р.</span>
           </div>
           </li>
-          <li class="popular-item">
+          <li class="popular-item catalog-item">
             <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Изображение Bosch BFG 6000">
             <div class="order-modal">
               <a class="order-modal-button cart-modal-button" href="#">Купить</a>
@@ -152,16 +161,17 @@
             </div>
             <h3>
               <a href="#">
-                <span>Перфоратор</span>
-                <span class="uppercase">Bosch<br> BFG 6000</span>
+                <span>Перфоратор BOSCH</span><br>
+                <span>BFG 6000</span>
               </a>
             </h3>
             <div class="price">
-            <span class="visually-hidden">Старая цена</span><span class="price old-price">30500 р.</span>
-            <span class="visually-hidden">Новая цена</span><span class="button price price-button">25500 р.</span>
+            <span class="visually-hidden">Старая цена</span><span class="price old-price">30500 Р.</span>
+            <span class="visually-hidden">Новая цена</span><span class="price price-button">25500 Р.</span>
             </div>
             </li>
-          <li class="new popular-item">
+          <li class="popular-item catalog-item">
+            <div class="flag flag-new"><span class="visually-hidden">Новинка</span></div>
             <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Изображение Bosch BFG 2000. Новинка">
             <div class="order-modal">
               <a class="order-modal-button cart-modal-button" href="#">Купить</a>
@@ -169,13 +179,13 @@
             </div>
             <h3>
               <a href="#">
-                <span>Перфоратор</span>
-                <span class="uppercase">Bosch<br> BFG 2000</span>
+                <span>Перфоратор BOSCH</span><br>
+                <span>BFG 2000</span>
               </a>
             </h3>
             <div class="price">
             <span class="visually-hidden">Старая цена</span><span class="price old-price"></span>
-            <span class="visually-hidden">Цена</span><span class="button price price-button">12500 р.</span>
+            <span class="visually-hidden">Цена</span><span class="price price-button">12500 Р.</span>
           </div>
           </li>
         </ul>
@@ -188,7 +198,7 @@
         <ul class="popular-vendors">
           <li class="popular-vendor">
             <a href="#">
-              <img class="bosch" src="img/vendor-logo/bosch.png" width="126" height="37"alt="Логотип Bosch">
+              <img class="bosch" src="img/vendor-logo/bosch.png" width="126" height="37" alt="Логотип Bosch">
             </a>
           </li>
           <li class="popular-vendor">
@@ -301,21 +311,10 @@
           Вы можете забрать товар сами,<br>
           заехав в наш офис:
         </p>
-        <a class="map" href="img/map-large.png">
-          <img src="img/map-small.png" width="300" height="158" alt="Адрес офиса: Большая конюшенная д.19">
+        <a class="map-button" href="img/map-large.png">
+          <img src="img/map-small.png" width="300" height="158" alt="Адрес офиса: Большая конюшенная д.19, Санкт-Петербург">
         </a>
         <a class="button write-us-button" href="#">Заблудились? Напишите нам!</a>
-        <div class="display-none write-us-form">
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <label for="user-name">Ваше имя:</label>
-            <input id="user-name" name="user-name" type="text" placeholder="Имя Фамилия">
-            <label for="user-email">Ваш e-mail:</label>
-            <input id="user-email" name="user-email" type="email" placeholder="email@example.com">
-            <label for="comment-field">Текст письма:</label>
-            <textarea id="comment-field" name="comment" placeholder="В свободной форме"></textarea>
-            <button type="submit">Отправить</button>
-          </form>
-        </div>
       </section>
     </div>
       </div>
@@ -371,5 +370,90 @@
         </div>
        </div>
     </footer>
+    <section>
+      <div  class="modal modal-login">
+      <h3 class="visually-hidden">Вход в личный кабинет</h3>
+      <form action="https://echo.htmlacademy.ru/courses" class="login-form" method="get">
+      <ul class="modal-login-wrapper">
+        <li class="modal-item">
+          <label for="username-login">Ваше имя:</label>
+          <input type="text" name="username" id="username-login" placeholder="Имя Фамилия">
+        </li>
+        <li class="modal-item">
+          <label for="password-login">Ваш пароль:</label>
+          <input type="password" name="password" id="password-login" placeholder="*********">
+        </li>
+      </ul>
+      <div class="modal-bottom">
+      <button class="button modal-login-button" type="submit">Отправить</button>
+      <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
+      </form>
+    </div>
+    </section>
+    <section>
+      <div class="modal modal-reg">
+      <h3 class="visually-hidden">Регистрация</h3>
+      <form action="https://echo.htmlacademy.ru/courses" class="reg-form" method="get">
+      <ul class="modal-reg-wrapper">
+        <li class="modal-item">
+          <label for="username-reg">Ваше имя:</label>
+          <input type="text" name="username" id="username-reg" placeholder="Имя Фамилия">
+        </li>
+        <li class="modal-item">
+          <label for="password-reg">Ваш пароль:</label>
+          <input type="password" name="password" id="password-reg" placeholder="*********">
+        </li>
+        <li class="modal-item">
+          <label for="phone-reg">Ваш телефон:</label>
+          <input type="tel" name="phone" id="phone-reg" placeholder="8 000 000000">
+        </li>
+        <li class="modal-item">
+          <label for="email-reg">Ваш телефон:</label>
+          <input type="email" name="email" id="email-reg" placeholder="email@example.com">
+        </li>
+      </ul>
+      <div class="modal-bottom">
+      <button class="button modal-reg-button" type="submit">Отправить</button>
+      <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
+      </form>
+    </div>
+    </section>
+    <section>
+      <div class="modal modal-write-us">
+      <h3 class="visually-hidden">Напишите нам</h3>
+      <form action="https://echo.htmlacademy.ru/courses" class="write-us-form" method="get">
+      <ul class="modal-write-us-wrapper">
+        <li class="modal-item">
+          <label for="username-write-us">Ваше имя:</label>
+          <input type="text" name="username" id="username-write-us" placeholder="Имя Фамилия">
+        </li>
+        <li class="modal-item">
+          <label for="email-write-us">Ваш e-mail:</label>
+          <input type="email" name="email" id="email-write-us" placeholder="email@example.com">
+        </li>
+        <li class="modal-item">
+          <label for="text-write-us">Текст письма:</label>
+          <textarea name="text" id="text-write-us" placeholder="В свободной форме"></textarea>
+        </li>
+      </ul>
+      <div class="modal-bottom">
+      <button class="button modal-login-button" type="submit">Отправить</button>
+      <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
+      </form>
+    </div>
+    </section>
+    <section>
+      <div class="modal modal-map">
+        <h3 class="visually-hidden">Интерактивная карта</h3>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CKaqv4yt" width="560" height="400"></iframe>
+      </div>
+     </section>
+    <script src="js/catalog-slider.js"></script>
+    <script src="js/modal-login.js"></script>
+    <script src="js/modal-reg.js"></script>
+    <script src="js/modal-map.js"></script>
   </body>
 </html>
