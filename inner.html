@@ -48,7 +48,7 @@
               <span class="visually-hidden">Выйти</span>
             </button>
           </li>
-          <li>
+          <li class="user-own-menu">
             <a class="user-menu-item orders" href="#">Мои заказы</a>
             <a class="user-menu-item user-page" href="#">Личный кабинет</a>
           </li>
@@ -84,58 +84,79 @@
     <div class="main-content-wrapp">
       <form class="content-wrapp-left" action="https://echo.htmlacademy.ru/courses" method="post">
         <h3>Фильтр:</h3>
-        <fieldset>
+        <fieldset class="slider-price">
             <legend>Цена:</legend>
-            <div class="filter-price">
-              <input type="range" min="0" step="1" max="30000" value="0">
-              <span>0</span> - <span>30000</span>
-            </div>
+            <div class="slider-price-wrapper">
+            <div id='id66' class="range">
+  <div id='id66b' class='range__between'></div>
+    <button id='id661' class="range__button_1"></button>
+    <button id='id662' class="range__button_2"></button>
+    <input id='id66i1' class='range_inpt1' type='number' min='0' max='30000'>
+    - <input id='id66i2' class='range_inpt2' type='number' min='0' max='30000'>
+</div>
+</div>
         </fieldset>
-         <fieldset>
+         <fieldset class="filter-vendor">
           <legend>Производители:</legend>
+          <ul class="filter">
+            <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-bosch" name="Bosch" checked>
             <label for="filter-bosch">Bosch</label>
-            <input type="checkbox" id="filter-bosch" name="Bosch" checked>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-interscol" name="Интерскол">
             <label for="filter-interscol">Интерскол</label>
-            <input type="checkbox" id="filter-interscol" name="Интерскол">
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-makita" name="Makita" checked>
             <label for="filter-makita">Makita</label>
-            <input type="checkbox" id="filter-makita" name="Makita" checked>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-dewalt" name="Dewalt">
             <label for="filter-dewalt">Dewalt</label>
-            <input type="checkbox" id="filter-dewalt" name="Dewalt">
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-hitachi" name="Hitachi">
             <label for="filter-hitachi">Hitachi</label>
-            <input type="checkbox" id="filter-hitachi" name="Hitachi">
+          </li>
+        </ul>
           </fieldset>
-        <fieldset>
+        <fieldset class="battery-type-filter">
           <legend>Питание:</legend>
+          <ul class="filter">
+            <li class="filter-option">
+            <input class="visually-hidden filter-radio-checkbox" type="radio" id="radiobutton1" name="energy-type-button" value="Аккумуляторные" checked>
             <label for="radiobutton1">Аккумуляторные</label>
-            <input type="radio" id="radiobutton1" name="energy-type-button" value="Аккумуляторные" checked>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-radio-checkbox" type="radio" id="radiobutton2" name="energy-type-button" value="Сетевые">
             <label for="radiobutton2">Сетевые</label>
-            <input type="radio" id="radiobutton2" name="energy-type-button" value="Сетевые">
+          </li>
+        </ul>
           </fieldset>
-        <input type="submit" name="filtr-button" value="Показать">
+        <input class="left-filter-button" type="submit" name="filter-button" value="Показать">
       </form>
     <div class="content-wrapp-right">
-      <section>
-        <div class="right-filter-wrapper">
+      <section class="right-filter-wrapper">
         <h3 class="right-filter-item">Сортировка:</h3>
         <a class="right-filter-item price-filter" href="#">По цене</a>
         <a class="right-filter-item type-filter" href="#">По типу</a>
         <a class="right-filter-item function-filter" href="#">По функционалу</a>
-        <a class="right-filter-item filter-up-button" href="#">
+        <a class="right-filter-item filter-button filter-up-button" href="#">
           <span class="visually-hidden">По возрастанию</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
             <path fill="#231F20" d="M5.5 0L0 10h11z"/>
           </svg>
         </a>
-        <a class="right-filter-item filter-down-button" href="#">
+        <a class="right-filter-item filter-button filter-down-button" href="#">
           <span class="visually-hidden">По убыванию</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
             <path fill="#231F20" d="M5.5 10L0 0h11"/>
           </svg>
         </a>
-      </div>
       </section>
       <div>
-        <h3>Список товаров</h3>
+        <h3 class="visually-hidden">Список товаров</h3>
         <ul class="catalog-items">
           <li class="catalog-item">
             <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Изображение Bosch BFG 3000">
@@ -145,8 +166,8 @@
                 <span>Bosch BFG 3000</span>
               </a>
             </h3>
-            <span class="visually-hidden">Старая цена</span><span class="price old-price">22500 р.</span>
-            <span class="visually-hidden">Новая цена</span><span class="price price-button">15500 р.</span>
+            <span class="visually-hidden">Старая цена</span><span class="price old-price">22500 Р.</span>
+            <span class="visually-hidden">Новая цена</span><span class="price price-button">15500 Р.</span>
             <div class="order-modal">
               <a class="order-modal-button cart-modal-button" href="#">Купить</a>
               <a class="order-modal-button bookmark-modal-button" href="#">В закладки</a>
@@ -167,8 +188,7 @@
               <a class="order-modal-button bookmark-modal-button" href="#">В закладки</a>
             </div>
           </li>
-          <li class="catalog-item">
-            <div class="flag flag-new"><span class="visually-hidden">Новинка</span></div>
+          <li class="catalog-item new-item">
             <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Изображение Bosch BFG 2000. Новинка">
             <h3>
               <a href="#">
@@ -197,8 +217,7 @@
               <a class="order-modal-button bookmark-modal-button" href="#">В закладки</a>
             </div>
           </li>
-          <li class="catalog-item">
-            <div class="flag flag-new"><span class="visually-hidden">Новинка</span></div>
+          <li class="catalog-item new-item">
             <img class="offerimage" src="img/items/item-bosch-bfg6000.jpg" width="218" height="170" alt="Изображение Bosch BFG 6000. Новинка">
             <h3>
               <a href="#">
@@ -227,8 +246,7 @@
               <a class="order-modal-button bookmark-modal-button" href="#">В закладки</a>
             </div>
           </li>
-          <li class="catalog-item">
-            <div class="flag flag-new"><span class="visually-hidden">Новинка</span></div>
+          <li class="catalog-item new-item">
             <img class="offerimage" src="img/items/item-bosch-bfg3000.jpg" width="218" height="170" alt="Изображение Bosch BFG 3000. Новинка">
             <h3>
               <a href="#">
@@ -353,5 +371,6 @@
       <a href="#">Продолжить покупки</a>
       <button type="button" title="Закрыть"></button>
     </section>
+    <script src="js/filter-price.js"></script>
   </body>
 </html>
