@@ -1,18 +1,34 @@
-var loginLink = document.querySelector(".login-button");
-  var loginPopup = document.querySelector(".modal-login");
-  var close = popup.querySelector(".modal-close-button");
+var loginButton = document.querySelector(".login-button");
+var mapButton = document.querySelector(".map-button");
+var regButton = document.querySelector(".reg-button");
+var writeUsButton = document.querySelector(".write-us-button");
+var addToCartButton = document.querySelector(".cart-modal-button");
 
+  var loginPopup = document.querySelector(".modal-login");
+  var mapPopup = document.querySelector(".modal-map");
+  var regPopup = document.querySelector(".modal-reg");
+  var writeUsPopup = document.querySelector(".modal-write-us");
+  var addToCartPopup = document.querySelector(".modal-add-to-cart");
+
+  var loginСlose = loginPopup.querySelector(".modal-close-button");
+  var mapClose = mapPopup.querySelector(".modal-close-button");
+  var regClose = regPopup.querySelector(".modal-close-button");
+  var writeUsClose = writeUsPopup.querySelector(".modal-close-button");
+  var addToCartClose = addToCartPopup.querySelector(".modal-close-button");
+
+// логин
   var loginForm = loginPopup.querySelector(".login-form");
-  var loginUsername = loginPopup.querySelector("[id=username-login]");
-  var loginPassword = loginPopup.querySelector("[id=password-login]");
+  var loginUsername = loginPopup.querySelector("[name=username]");
+  var loginPassword = loginPopup.querySelector("[name=password]");
   var isStorageSupport = true;
   var storage = "";
 
-  loginLink.addEventListener("click", function (evt) {
+
+  loginButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     loginPopup.classList.add("modal-show");
-
-    close.addEventListener("click", function (evt) {
+  });
+    loginСlose.addEventListener("click", function (evt) {
     evt.preventDefault();
     loginPopup.classList.remove("modal-show");
     loginPopup.classList.remove("modal-error");
@@ -37,6 +53,143 @@ var loginLink = document.querySelector(".login-button");
       if (loginPopup.classList.contains("modal-show")) {
         loginPopup.classList.remove("modal-show");
         loginPopup.classList.remove("modal-error");
+      }
+    }
+  });
+// карта
+  mapButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("modal-show");
+  });
+
+  mapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (mapPopup.classList.contains("modal-show")) {
+        mapPopup.classList.remove("modal-show");
+      }
+    }
+  });
+
+// регистрация
+var regForm = regPopup.querySelector(".reg-form");
+var regUsername = regPopup.querySelector("[name=username]");
+var regPassword = regPopup.querySelector("[name=password]");
+var regPhone = regPopup.querySelector("[name=phone]");
+var regEmail = regPopup.querySelector("[name=email]");
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("username");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+regButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+
+  if (storage) {
+    username.value = storage;
+    password.focus();
+  } else {
+    username.focus();
+  }
+});
+
+regClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  regPopup.classList.remove("modal-show");
+  regPopup.classList.remove("modal-error");
+});
+
+regForm.addEventListener("submit", function (evt) {
+  if (!regUsername.value || !regPassword.value|| !regPhone.value|| !regEmail.value) {
+    evt.preventDefault();
+    regPopup.classList.remove("modal-error");
+    regPopup.offsetWidth = popup.offsetWidth;
+    regPopup.classList.add("modal-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("username", regUsername.value);
+    }
+  }
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    }
+  }
+});
+
+// написать нам
+
+var writeUsForm = loginPopup.querySelector(".write-us-form");
+var writeUsUsername = loginPopup.querySelector("[name=username-write-us]");
+var writeUsEmail = loginPopup.querySelector("[name=email-write-us]");
+var isStorageSupport = true;
+var storage = "";
+
+
+writeUsButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  writeUsPopup.classList.add("modal-show");
+});
+  writeUsClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  writeUsPopup.classList.remove("modal-show");
+  writeUsPopup.classList.remove("modal-error");
+});
+
+writeUsForm.addEventListener("submit", function (evt) {
+  if (!writeUsUsername.value || !writeUsEmail.value) {
+    evt.preventDefault();
+    writeUsPopup.classList.remove("modal-error");
+    writeUsPopup.offsetWidth = popup.offsetWidth;
+    writeUsPopup.classList.add("modal-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("username", writeUsUsername.value);
+    }
+  }
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (writeUsPopup.classList.contains("modal-show")) {
+      writeUsPopup.classList.remove("modal-show");
+      writeUsPopup.classList.remove("modal-error");
+    }
+  }
+});
+
+// товар в корзине
+  addToCartButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    addToCartPopup.classList.add("modal-show");
+  });
+
+  addToCartClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    addToCartPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (addToCartPopup.classList.contains("modal-show")) {
+        addToCartPopup.classList.remove("modal-show");
       }
     }
   });
