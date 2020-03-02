@@ -42,7 +42,7 @@
         </div>
         <ul class="user-menu">
           <li class="login-button"><a href="login-page.html">Войти</a></li>
-          <li class="reg-button"><a href="#">Регистрация</a></li>
+          <li class="reg-button"><a href="reg-page.html">Регистрация</a></li>
         </ul>
       </div>
         <nav class="container">
@@ -62,8 +62,7 @@
       <div class="main container">
       <section class="catalog-menu">
         <div class="catalog-wrapper-1">
-          <div class="catalog-menu-item item1">
-            <div class="flag flag-new"><span class="visually-hidden">Новинка</span></div>
+          <div class="catalog-menu-item item1 new-item">
             <h3>Материалы</h3>
             <a class="button catalog-button catalog-button-item1" href="#">На любой вкус</a>
           </div>
@@ -71,18 +70,18 @@
             <h3>Инструмент</h3>
             <a class="button catalog-button catalog-button-item2" href="#">На все случаи</a>
           </div>
-        <div class="slider-wrapper">
-          <div class="blog-slider__container">
-            <div class="blogSlides fade">
-              <div class="blog-slider__numbertext">
+        <div class="catalog-slider-wrapper">
+          <div class="catalog-slider">
+            <div class="catalog-slides fade">
+              <div class="catalog-slide">
                 <h3>Дрели</h3>
                 <p>Соседям на радость!</p>
                 <a class="button open-catalog-button" href="inner.html">Открыть каталог</a>
               </div>
               <img src="img/slider-image1.jpg" width="620" height="266" alt="">
                 </div>
-            <div class="blogSlides fade">
-              <div class="blog-slider__numbertext">
+            <div class="catalog-slides fade">
+              <div class="catalog-slide">
                 <h3>Перфораторы</h3>
                 <p>Настоящие мужские игрушки</p>
                 <a class="button open-catalog-button" href="inner.html">Открыть каталог</a>
@@ -91,9 +90,9 @@
               </div>
             <a class="turn-left-button" onclick="plusSlides(-1)"><span class="visually-hidden">Назад</span></a>
             <a class="turn-right-button" onclick="plusSlides(1)"><span class="visually-hidden">Вперед</span></a>
-          <div class="blogSlider__dots" style="text-align:center">
-            <span class="blogSlider__dots--dot" onclick="currentSlide(1)"></span>
-            <span class="blogSlider__dots--dot" onclick="currentSlide(2)"></span>
+          <div class="slider-dots" style="text-align:center">
+            <span class="slider-dots-dot" onclick="currentSlide(1)"></span>
+            <span class="slider-dots-dot" onclick="currentSlide(2)"></span>
             </div>
         </div>
       </div>
@@ -144,8 +143,8 @@
             </div>
             <h3>
               <a href="#">
-                <span>Перфоратор</span>
-                <span class="uppercase">Bosch<br> BFG 3000</span>
+                <span>Перфоратор BOSCH</span><br>
+                <span>BFG 3000</span>
               </a>
             </h3>
             <div class="price">
@@ -170,8 +169,7 @@
             <span class="visually-hidden">Новая цена</span><span class="price price-button">25500 Р.</span>
             </div>
             </li>
-          <li class="popular-item catalog-item">
-            <div class="flag flag-new"><span class="visually-hidden">Новинка</span></div>
+          <li class="popular-item catalog-item new-item">
             <img class="offerimage" src="img/items/item-bosch-bfg2000.jpg" width="218" height="170" alt="Изображение Bosch BFG 2000. Новинка">
             <div class="order-modal">
               <a class="order-modal-button cart-modal-button" href="#">Купить</a>
@@ -259,7 +257,7 @@
           </li>
         </ul>
         <div class="slider-content">
-        <section class="slider-item" id="delivery">
+        <section class="slider-item delivery" id="delivery">
             <h2>Доставка</h2>
             <p>
               Мы с удовольствием доставим ваш товар прямо<br>
@@ -268,7 +266,7 @@
               поднимая его на ваш этаж!
             </p>
           </section>
-          <section class="slider-item" id="guarantee">
+          <section class="slider-item guarantee" id="guarantee">
             <h2>Гарантия</h2>
             <p>
               Если купленный у нас товар поломается или заискрит,<br>
@@ -278,13 +276,13 @@
               Дом уж восстановите как-нибудь сами.
             </p>
           </section>
-          <section class="slider-item" id="credit">
+          <section class="slider-item credit" id="credit">
             <h2>Кредит</h2>
             <p>
               Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.
             </p>
-            <a href="#">Отправить заявку</a>
+            <a class="button credit-button" href="#">Отправить заявку</a>
           </section>
         </div>
         </div>
@@ -328,7 +326,7 @@
             </a>
             <p class="footer-contact">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-              +7(812) 555-05-55
+              +7 (812) 555-05-55
             </p>
           </div>
           <div class="footer-nav">
@@ -370,8 +368,7 @@
         </div>
        </div>
     </footer>
-    <section>
-      <div  class="modal modal-login">
+    <section class="modal modal-login">
       <h3 class="visually-hidden">Вход в личный кабинет</h3>
       <form action="https://echo.htmlacademy.ru/courses" class="login-form" method="get">
       <ul class="modal-login-wrapper">
@@ -389,10 +386,8 @@
       <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
       </div>
       </form>
-    </div>
     </section>
-    <section>
-      <div class="modal modal-reg">
+    <section class="modal modal-reg">
       <h3 class="visually-hidden">Регистрация</h3>
       <form action="https://echo.htmlacademy.ru/courses" class="reg-form" method="get">
       <ul class="modal-reg-wrapper">
@@ -418,20 +413,18 @@
       <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
       </div>
       </form>
-    </div>
     </section>
-    <section>
-      <div class="modal modal-write-us">
+    <section class="modal modal-write-us">
       <h3 class="visually-hidden">Напишите нам</h3>
       <form action="https://echo.htmlacademy.ru/courses" class="write-us-form" method="get">
       <ul class="modal-write-us-wrapper">
         <li class="modal-item">
           <label for="username-write-us">Ваше имя:</label>
-          <input type="text" name="username" id="username-write-us" placeholder="Имя Фамилия">
+          <input type="text" name="username-write-us" id="username-write-us" placeholder="Имя Фамилия">
         </li>
         <li class="modal-item">
           <label for="email-write-us">Ваш e-mail:</label>
-          <input type="email" name="email" id="email-write-us" placeholder="email@example.com">
+          <input type="email" name="email-write-us" id="email-write-us" placeholder="email@example.com">
         </li>
         <li class="modal-item">
           <label for="text-write-us">Текст письма:</label>
@@ -443,17 +436,21 @@
       <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
       </div>
       </form>
+    </section>
+    <section class="modal modal-map">
+      <h3 class="visually-hidden">Интерактивная карта</h3>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CKadnE7L" width="560" height="400"></iframe>
+        <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
+    </section>
+    <section class="modal modal-add-to-cart">
+      <h3>Товар добавлен в корзину!</h3>
+      <div class="modal-bottom">
+      <button class="button add-to-cart-button" type="submit">Отправить</button>
+      <button class="button purchace-continue-button" type="button">Прододжить покупки</button>
+      <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
     </div>
     </section>
-    <section>
-      <div class="modal modal-map">
-        <h3 class="visually-hidden">Интерактивная карта</h3>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CKaqv4yt" width="560" height="400"></iframe>
-      </div>
-     </section>
     <script src="js/catalog-slider.js"></script>
     <script src="js/modal-login.js"></script>
-    <script src="js/modal-reg.js"></script>
-    <script src="js/modal-map.js"></script>
-  </body>
+    </body>
 </html>
