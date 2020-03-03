@@ -2,9 +2,10 @@ var loginButton = document.querySelector(".login-button");
 var mapButton = document.querySelector(".map-button");
 var regButton = document.querySelector(".reg-button");
 var writeUsButton = document.querySelector(".write-us-button");
-var addToCartButton = document.querySelector(".cart-modal-button");
+var addToCartButtons = document.querySelectorAll(".cart-modal-button");
 
   var loginPopup = document.querySelector(".modal-login");
+  var loginModalPopup = loginPopup.querySelector(".modal");
   var mapPopup = document.querySelector(".modal-map");
   var regPopup = document.querySelector(".modal-reg");
   var writeUsPopup = document.querySelector(".modal-write-us");
@@ -18,8 +19,8 @@ var addToCartButton = document.querySelector(".cart-modal-button");
 
 // логин
   var loginForm = loginPopup.querySelector(".login-form");
-  var loginUsername = loginPopup.querySelector("[name=username]");
-  var loginPassword = loginPopup.querySelector("[name=password]");
+  var loginUsername = loginPopup.querySelector("[name=username-login]");
+  var loginPassword = loginPopup.querySelector("[name=password-login]");
   var isStorageSupport = true;
   var storage = "";
 
@@ -37,9 +38,9 @@ var addToCartButton = document.querySelector(".cart-modal-button");
   loginForm.addEventListener("submit", function (evt) {
     if (!loginUsername.value || !loginPassword.value) {
       evt.preventDefault();
-      loginPopup.classList.remove("modal-error");
-      loginPopup.offsetWidth = popup.offsetWidth;
-      loginPopup.classList.add("modal-error");
+      loginModalPopup.classList.remove("modal-error");
+      loginModalPopup.offsetWidth = popup.offsetWidth;
+      loginModalPopup.classList.add("modal-error");
     } else {
       if (isStorageSupport) {
         localStorage.setItem("username", loginUsername.value);
@@ -78,10 +79,10 @@ var addToCartButton = document.querySelector(".cart-modal-button");
 
 // регистрация
 var regForm = regPopup.querySelector(".reg-form");
-var regUsername = regPopup.querySelector("[name=username]");
-var regPassword = regPopup.querySelector("[name=password]");
-var regPhone = regPopup.querySelector("[name=phone]");
-var regEmail = regPopup.querySelector("[name=email]");
+var regUsername = regPopup.querySelector("[name=username-reg]");
+var regPassword = regPopup.querySelector("[name=password-reg]");
+var regPhone = regPopup.querySelector("[name=phone-reg]");
+var regEmail = regPopup.querySelector("[name=email-reg]");
 var isStorageSupport = true;
 var storage = "";
 
@@ -93,7 +94,7 @@ try {
 
 regButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.add("modal-show");
+  regPopup.classList.add("modal-show");
 
   if (storage) {
     username.value = storage;
@@ -134,9 +135,9 @@ window.addEventListener("keydown", function (evt) {
 
 // написать нам
 
-var writeUsForm = loginPopup.querySelector(".write-us-form");
-var writeUsUsername = loginPopup.querySelector("[name=username-write-us]");
-var writeUsEmail = loginPopup.querySelector("[name=email-write-us]");
+var writeUsForm = writeUsPopup.querySelector(".write-us-form");
+var writeUsUsername = writeUsPopup.querySelector("[name=username-write-us]");
+var writeUsEmail = writeUsPopup.querySelector("[name=email-write-us]");
 var isStorageSupport = true;
 var storage = "";
 
@@ -175,10 +176,13 @@ window.addEventListener("keydown", function (evt) {
 });
 
 // товар в корзине
-  addToCartButton.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    addToCartPopup.classList.add("modal-show");
-  });
+debugger
+  addToCartButtons.forEach(function (addToCartButton) {
+    addToCartButton.addEventListener ("click", function (evt) {
+      evt.preventDefault();
+      addToCartPopup.classList.add("modal-show");
+    })
+});
 
   addToCartClose.addEventListener("click", function (evt) {
     evt.preventDefault();
