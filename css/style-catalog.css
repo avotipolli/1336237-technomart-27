@@ -194,8 +194,7 @@ border-bottom: 1px dotted #ee3643;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 32px;
-  padding-bottom: 60px;
+  margin-bottom: 22px;
   border-bottom: 2px solid #f7f3ec;
 }
 
@@ -216,24 +215,29 @@ border-bottom: 1px dotted #ee3643;
 .slider-price-wrapper {
     position: relative;
     display: flex;
+    flex-direction: column;
     margin-top: 21px;
-    background-color: #f7f3ec;
-    padding: 30px 0px;
-    border-radius: 5px;
 }
 
+.range-wrapper {
+  background-color: #f7f3ec;
+  padding: 25px 0px;
+  padding-top: 38px;
+  border-radius: 5px;
+}
 .range {
     width:180px;
-    height:2px;
+    height: 2px;
     background-color: #d7dcde;
     margin-bottom: 9px;
+    margin-left: 20px;
 }
 
 .range__button_1, .range__button_2 {
     position: absolute;
     top: 50%;
     margin: 0;
-    margin-top: -5px;
+    margin-top: -35px;
     width: 20px;
     height: 22px;
     cursor: move;
@@ -245,11 +249,19 @@ border-bottom: 1px dotted #ee3643;
 
 .range__between {
   position: absolute;
-    height: 2px;
+    height: 3px;
     width:0px;
     margin-top:0;
     border: none;
     background-color: #00cb75;
+}
+
+.range-windows {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .range_inpt1, .range_inpt2 {
@@ -268,6 +280,7 @@ border-bottom: 1px dotted #ee3643;
 
 .filter {
   list-style: none;
+
 }
 
 .filter-option {
@@ -276,7 +289,7 @@ border-bottom: 1px dotted #ee3643;
 }
 .filter-vendor label, .battery-type-filter label {
   font-family: "PTSans",  Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }
@@ -290,7 +303,7 @@ border-bottom: 1px dotted #ee3643;
   top: -3px;
   left: -34px;
   width: 27px;
-  height: 23px;
+  height: 27px;
   background: url("../img/checkbox-off.svg") no-repeat 0 0;
 }
 
@@ -300,24 +313,24 @@ border-bottom: 1px dotted #ee3643;
   top: -3px;
   left: -34px;
   width: 27px;
-  height: 23px;
+  height: 27px;
   background: url("../img/checkbox-on.svg") no-repeat 0 0;
 }
 
 .filter-radio-checkbox + label::before {
   content: "";
   position: absolute;
-  top: -3px;
+  top: -5px;
   left: -34px;
-  width: 27px;
-  height: 23px;
+  width: 25px;
+  height: 26px;
   background: url("../img/radio-off.svg") no-repeat 0 0;
 }
 
 .filter-radio-checkbox:checked + label::before {
   content: "";
   position: absolute;
-  top: -3px;
+  top: -5px;
   left: -34px;
   width: 25px;
   height: 26px;
@@ -327,10 +340,15 @@ border-bottom: 1px dotted #ee3643;
 .left-filter-button {
   width: 140px;
   color: #000;
-  padding: 15px 39px;
+  padding: 12px 35px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
+  margin-top: 30px;
+}
+
+input.left-filter-button {
+  font-family: "PTSans",  Arial, sans-serif;
   font-size: 13px;
   line-height: 13px;
   text-transform: uppercase;
@@ -338,7 +356,9 @@ border-bottom: 1px dotted #ee3643;
 .inner-page .catalog-item:nth-child(3n) {
   margin-right: 0px;
 }
+.inner-page .catalog-item {
 
+}
 .page-counter {
   display: flex;
   flex-wrap: wrap;
@@ -357,14 +377,14 @@ border-bottom: 1px dotted #ee3643;
   display: block;
   text-decoration: none;
   color: #000;
-  padding: 10px 15px 10px 15px;
+  padding: 12px 16px 12px 16px;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   margin-right: 10px;
 }
 
 .page-counter li:last-child > a {
-  padding: 10px 32px;
+  padding: 12px 32px;
 }
 
 .page-counter a:active {
@@ -375,8 +395,8 @@ border-bottom: 1px dotted #ee3643;
 .item-about {
   width: 100%;
   background-color: #f4f7f9;
-  padding-top: 67px;
-  padding-bottom: 73px;
+  padding-top: 65px;
+  padding-bottom: 70px;
 }
 
 .item-about h2 {
