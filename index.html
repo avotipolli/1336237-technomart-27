@@ -62,6 +62,7 @@
       <div class="main container">
       <section class="catalog-menu">
         <div class="catalog-wrapper-1">
+          <div class="catalog-wrapper-1-dop">
           <div class="catalog-menu-item item1 new-item">
             <h3>Материалы</h3>
             <a class="button catalog-button catalog-button-item1" href="#">На любой вкус</a>
@@ -70,6 +71,7 @@
             <h3>Инструмент</h3>
             <a class="button catalog-button catalog-button-item2" href="#">На все случаи</a>
           </div>
+        </div>
         <div class="catalog-slider-wrapper">
           <div class="catalog-slider">
             <div class="catalog-slides fade">
@@ -182,7 +184,6 @@
               </a>
             </h3>
             <div class="price">
-            <span class="visually-hidden">Старая цена</span><span class="price old-price"></span>
             <span class="visually-hidden">Цена</span><span class="price price-button">12500 Р.</span>
           </div>
           </li>
@@ -301,8 +302,7 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-        <a class="button about-company-button" href="#">Подробнее о компании</a>
-      </section>
+        </section>
       <section class="contact-us">
         <h2>Контакты</h2>
         <p>
@@ -312,8 +312,11 @@
         <a class="map-button" href="img/map-large.png">
           <img src="img/map-small.png" width="300" height="158" alt="Адрес офиса: Большая конюшенная д.19, Санкт-Петербург">
         </a>
-        <a class="button write-us-button" href="#">Заблудились? Напишите нам!</a>
       </section>
+    </div>
+    <div class="about-company-buttons-wrapper">
+      <a class="button about-company-button" href="#">Подробнее о компании</a>
+      <a class="button write-us-button" href="#">Заблудились? Напишите нам!</a>
     </div>
       </div>
     </main>
@@ -368,17 +371,18 @@
         </div>
        </div>
     </footer>
-    <section class="modal modal-login">
+    <div class="modal-wrapper modal-login">
+    <section class="modal">
       <h3 class="visually-hidden">Вход в личный кабинет</h3>
       <form action="https://echo.htmlacademy.ru/courses" class="login-form" method="get">
       <ul class="modal-login-wrapper">
         <li class="modal-item">
           <label for="username-login">Ваше имя:</label>
-          <input type="text" name="username" id="username-login" placeholder="Имя Фамилия">
+          <input type="text" name="username-login" id="username-login" placeholder="Имя Фамилия">
         </li>
         <li class="modal-item">
           <label for="password-login">Ваш пароль:</label>
-          <input type="password" name="password" id="password-login" placeholder="*********">
+          <input type="password" name="password-login" id="password-login" placeholder="*********">
         </li>
       </ul>
       <div class="modal-bottom">
@@ -387,25 +391,27 @@
       </div>
       </form>
     </section>
-    <section class="modal modal-reg">
+  </div>
+  <div class="modal-wrapper modal-reg">
+    <section class="modal">
       <h3 class="visually-hidden">Регистрация</h3>
       <form action="https://echo.htmlacademy.ru/courses" class="reg-form" method="get">
       <ul class="modal-reg-wrapper">
         <li class="modal-item">
           <label for="username-reg">Ваше имя:</label>
-          <input type="text" name="username" id="username-reg" placeholder="Имя Фамилия">
+          <input type="text" name="username-reg" id="username-reg" placeholder="Имя Фамилия">
         </li>
         <li class="modal-item">
           <label for="password-reg">Ваш пароль:</label>
-          <input type="password" name="password" id="password-reg" placeholder="*********">
+          <input type="password" name="password-reg" id="password-reg" placeholder="*********">
         </li>
         <li class="modal-item">
           <label for="phone-reg">Ваш телефон:</label>
-          <input type="tel" name="phone" id="phone-reg" placeholder="8 000 000000">
+          <input type="tel" name="phone-reg" id="phone-reg" placeholder="8 000 000000">
         </li>
         <li class="modal-item">
           <label for="email-reg">Ваш телефон:</label>
-          <input type="email" name="email" id="email-reg" placeholder="email@example.com">
+          <input type="email" name="email-reg" id="email-reg" placeholder="email@example.com">
         </li>
       </ul>
       <div class="modal-bottom">
@@ -414,7 +420,9 @@
       </div>
       </form>
     </section>
-    <section class="modal modal-write-us">
+  </div>
+  <div class="modal-wrapper modal-write-us">
+    <section class="modal">
       <h3 class="visually-hidden">Напишите нам</h3>
       <form action="https://echo.htmlacademy.ru/courses" class="write-us-form" method="get">
       <ul class="modal-write-us-wrapper">
@@ -437,12 +445,16 @@
       </div>
       </form>
     </section>
-    <section class="modal modal-map">
+  </div>
+  <div class="modal-wrapper modal-map">
+    <section class="modal">
       <h3 class="visually-hidden">Интерактивная карта</h3>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CKadnE7L" width="560" height="400"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A84800adfbe0bbb0f0c581d72fab367a58a7651bb1d37b42129e54a7f75123bd7&amp;source=constructor" width="100%" height="466" frameborder="0"></iframe>
         <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
     </section>
-    <section class="modal modal-add-to-cart">
+  </div>
+  <div class="modal-wrapper modal-add-to-cart">
+    <section class="modal">
       <h3>Товар добавлен в корзину!</h3>
       <div class="modal-bottom">
       <button class="button add-to-cart-button" type="submit">Отправить</button>
@@ -450,6 +462,7 @@
       <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
     </div>
     </section>
+  </div>
     <script src="js/catalog-slider.js"></script>
     <script src="js/modal-login.js"></script>
     </body>
