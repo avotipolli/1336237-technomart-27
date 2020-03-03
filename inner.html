@@ -87,13 +87,18 @@
         <fieldset class="slider-price">
             <legend>Цена:</legend>
             <div class="slider-price-wrapper">
+<div class="range-wrapper">
             <div id='id66' class="range">
   <div id='id66b' class='range__between'></div>
     <button id='id661' class="range__button_1"></button>
     <button id='id662' class="range__button_2"></button>
+    </div>
+  </div>
+    <div class="range-windows">
     <input id='id66i1' class='range_inpt1' type='number' min='0' max='30000'>
-    - <input id='id66i2' class='range_inpt2' type='number' min='0' max='30000'>
-</div>
+    <span>-</span>
+    <input id='id66i2' class='range_inpt2' type='number' min='0' max='30000'>
+  </div>
 </div>
         </fieldset>
          <fieldset class="filter-vendor">
@@ -365,12 +370,17 @@
         </div>
        </div>
     </footer>
-    <section class="modal add-cart-modal">
-      <h2>Товар добавлен в корзину!</h2>
-      <a href="#">Оформить заказ</a>
-      <a href="#">Продолжить покупки</a>
-      <button type="button" title="Закрыть"></button>
-    </section>
+    <div class="modal-wrapper modal-add-to-cart">
+      <section class="modal">
+        <h3>Товар добавлен в корзину!</h3>
+        <div class="modal-bottom">
+        <button class="button add-to-cart-button" type="submit">Отправить</button>
+        <button class="button purchace-continue-button" type="button">Прододжить покупки</button>
+        <button type="button" class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
+      </section>
+    </div>
     <script src="js/filter-price.js"></script>
+    <script src="js/modal-login.js"></script>
   </body>
 </html>
