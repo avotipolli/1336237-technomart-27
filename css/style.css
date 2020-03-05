@@ -1056,7 +1056,7 @@ a.bookmark-modal-button:active {
 .catalog-item-bottom {
   min-height: 154px;
   padding: 12px 31px 21px 31px;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
