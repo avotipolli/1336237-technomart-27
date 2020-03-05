@@ -995,18 +995,18 @@ a.bookmark-modal-button:active {
 
 .price-button {
   margin: 0;
-  margin-top: 12px;
+  margin-top: auto;
   padding: 12px 40px 12px 36px;
   background: url("../img/red-button.svg") no-repeat;
   background-position: 40px 0;
   color: #ffffff;
-  align-self: flex-end;
 }
 
 .old-price {
   color: #a9a9a9;
   text-decoration: line-through;
   margin: 0;
+  margin-bottom: 12px;
 
 }
 
