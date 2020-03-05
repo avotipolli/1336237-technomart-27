@@ -280,9 +280,6 @@ input:focus + .search-button path{
 .user-menu a:hover {
   color: #ee3643;
 }
-.user-menu a:hover .username::before {
-  opacity: 1;
-}
 .login-button:hover a::before {
   opacity: 1;
 }
@@ -330,6 +327,11 @@ input:focus + .search-button path{
   top:14px;
   right: 11px;
   opacity: 0.2;
+}
+
+.user-menu-main:hover .username::before,
+.user-menu-main:hover .logout-button {
+  opacity: 1;
 }
 
 a.user-menu-item {
@@ -873,7 +875,7 @@ a.catalog-button:active {
 
 .catalog-item img {
   width: 218px;
-  height: auto;
+  min-height: 164px;
   z-index: 10;
   overflow: hidden;
 }
@@ -988,6 +990,7 @@ a.bookmark-modal-button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .price-button {
@@ -1012,9 +1015,7 @@ a.bookmark-modal-button:active {
   width: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border: 1px solid #eaeaea;
-  padding-bottom: 15px;
   margin-bottom: 20px;
   margin-right: 20px;
 }
@@ -1036,20 +1037,30 @@ a.bookmark-modal-button:active {
   color:inherit;
 }
 
-.catalog-item h3 {
+.catalog-item-name {
   margin: 0;
   font-family: "PTSans",  Arial, sans-serif;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 21px;
   letter-spacing: -1px;
-  margin-top: 12px;
   margin-bottom: 14px;
   font-weight: bold;
   color: #000;
   text-align: center;
   flex-grow: 1;
 }
+.catalog-item-name > span {
+  display: block;
+}
 
+.catalog-item-bottom {
+  min-height: 154px;
+  padding: 12px 31px 21px 31px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .popular-vendors {
   margin-bottom: 65px;
@@ -1212,11 +1223,14 @@ img.metabo {
   background-color: #293449;
 }
 
+.slider-tab.active a,
 .slider-tab a:active {
   background-color: #fff;
   border-color: #fff;
   color: #000;
 }
+
+
 .slider-content {
   box-sizing: border-box;
   position: relative;
@@ -1862,9 +1876,7 @@ input.left-filter-button {
 .inner-page .catalog-item:nth-child(3n) {
   margin-right: 0px;
 }
-.inner-page .catalog-item {
 
-}
 .page-counter {
   display: flex;
   flex-wrap: wrap;
