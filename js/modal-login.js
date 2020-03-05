@@ -176,7 +176,6 @@ window.addEventListener("keydown", function (evt) {
 });
 
 // товар в корзине
-debugger
   addToCartButtons.forEach(function (addToCartButton) {
     addToCartButton.addEventListener ("click", function (evt) {
       evt.preventDefault();
@@ -197,3 +196,12 @@ debugger
       }
     }
   });
+
+var sliderTabs = document.querySelectorAll('.slider-tab');
+
+sliderTabs.forEach((sliderTab) => {
+  sliderTab.addEventListener("click", (event) => {
+    sliderTabs.forEach(tab => tab.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+  })
+});
